@@ -1,0 +1,20 @@
+main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    /* margin-left: 439px; */
+    justify-content: center;
+    height: 60%;
+
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+#gioco{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
