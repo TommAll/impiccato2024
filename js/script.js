@@ -1,12 +1,14 @@
 
-let parole=caricaParoleDB();
 let as=" ";
+let parole;
 let parola=" ";
 let vchar=[];
 let indErr=1;
-caricaParola();
+caricaParoleDB();
+
 function caricaParola(){
     let ind=0; 
+    console.log(parole)
     ind=Math.round(Math.random()*20);
     parola=parole[ind];
     console.log(parola); 
@@ -76,4 +78,34 @@ function controllaParola(){
         }
     }
     return vinto;
+}
+
+function caricaParoleDB()
+{
+   
+
+    $.ajax({ 
+        url: './parole.php',
+        header: {
+            "Access-Control-Allow-Origin": '*',
+        },
+        data: {
+            estrai: 1,
+        },
+        type: 'POST',
+        async:"false",
+
+        success: (risposta) => {
+            console.log(risposta);
+            parole= JSON.parse(risposta); 
+           caricaParola();
+
+        },
+        error: (risposta) => {
+            console.log(risposta);
+        }
+    })
+
+
+
 }
