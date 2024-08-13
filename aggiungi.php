@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <form action="aggiungi.php" method="post">
+<body style="width:100%;height:100vH;display:flex;justify-content:center;align-items:center">
+    <form action="aggiungi.php" method="post" style="padding:15px;border:2px solid black;">
         <p>INSERISCI UNA NUOVA PAROLA</p>
         <br>
         <input type="text" name="txtIns" id="txtIns">
+        <br>
         <br>
         <input type="submit" value="AGGIUNGI">
     </form>
